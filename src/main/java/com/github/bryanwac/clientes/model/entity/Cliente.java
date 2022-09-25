@@ -5,8 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
@@ -20,9 +23,12 @@ public class Cliente {
     private Integer id;
 
     @Column(nullable = false, length = 150)
+    @NotEmpty(message = "O Campo nome é obrigatório.")//validação padrão
     private String nome;
 
     @Column(nullable = false, length = 11)
+    @NotNull(message = "O Campo CPF é obrigatório.")  //Validador padrão do javaEE
+    @CPF(message = "O Campo CPF é inválido.")         //validador do hibernate pra CPF
     private String cpf;
 
     @Column (name = "data_cadastro", updatable = false)
