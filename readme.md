@@ -1,5 +1,6 @@
 <h1> Sistema para gerenciamento de serviços em JAVA+ANGULAR </h1>
-
+<p><bold> Este repositório inclui apenas a API de controle do projeto, criada em JAVA.<bold></p>
+<p><bold> O repositório destinado à toda estrutura FrontEnd da Aplicação encontra-se neste link:  #  <bold></p>
 <body>
 <h2> Tecnologias Usadas : </h2>
 <ul>
